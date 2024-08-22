@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --clr1: #FFD7BE;
+  --clr2: #0097A7;
+  --clr3: #754975;
+  --clr4: #ACFFAC;
+  --clr5: #032B44;
+  --clr6: #32CD32;
+  --clr7: #333333;
+}
+
+/* Header */
+header .container {
+  background-color: #f8f9fa;
+  width: 100%;
+  max-width: 1440px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .logo {
+  font-weight: bold;
+}
+
+header .btn {
+  background-color: var(--clr2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner {
+  padding: 80px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.banner-text {
+  max-width: 540px;
+  text-align: left;
+  flex: 1; 
+  order: 1; 
+}
+
+.banner-text h1 {
+  font-size: 50px;
+  line-height: 66px;
+  color: var(--clr5);
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--clr7);
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+.banner-buttons .btn1 {
+  background-color: var(--clr3);
+  color: var(--clr7);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.banner-buttons .btn2 {
+  background-color: var(--clr2);
+  color: var(--clr7);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.banner-image {
+  flex: 1; 
+  order: 2; 
+  display: flex; 
+  justify-content: flex-end; 
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; 
+}
+
+/* Sections */
+.section1, .section2, .section3 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-image img {
+  max-width: 480px;
+  height: auto;
+}
+
+.section-text {
+  max-width: 445px;
+}
+
+.section1 h2, .section2 h2, .section3 h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.section1 p, .section2 p, .section3 p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Pricing Section */
+.pricing {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.pricing h2 {
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.pricing p {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.pricing .price-tag {
+  font-size: 50px;
+  line-height: 66px;
+  text-align: center;
+}
+
+.pricing .btn {
+  background-color: var(--clr2);
+  color: var(--clr7);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .btn{
+  background-color: var(--clr2);
+  color: var(--clr7);
+  padding: 5px 12px;
+  border-radius: 3px;
+  border: 0;
+}
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social-links a img {
+  width: 16px;
+  height: 16px;
+  border-radius: 20%;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .banner {
+    padding: 60px 40px;
+    flex-direction: column;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-image img {
+    width: 100%;
+  }
+
+  .section1, .section2, .section3, .pricing {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .section-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 10px;
+    }
+  .banner-text h1 {
+    font-size: 36px;
+  }
+
+  .banner-text p {
+    font-size: 16px;
+  }
+
+  footer .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 20px 10px; 
+    }
+  .banner-text h1 {
+    font-size: 24px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  footer .nav-links {
+    display: none;
+  }
+}
